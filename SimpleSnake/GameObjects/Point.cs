@@ -24,7 +24,7 @@ namespace SimpleSnake.GameObjects
 
         public void Draw(int leftX,int topY,char symbol)
         {
-            Console.SetCursorPosition(this.LeftX, this.TopY);
+            Console.SetCursorPosition(leftX, topY);
             Console.WriteLine(symbol);
         }
     }
