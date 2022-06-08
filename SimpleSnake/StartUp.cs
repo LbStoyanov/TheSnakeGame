@@ -18,7 +18,8 @@
             Wall wall = new Wall(130, 25);
             Food food = new FoodDollar(wall);
             food.SetRandomPosition(new Queue<Point>());
-            
+
+            Snake snake = new Snake();
             
         }
     }
