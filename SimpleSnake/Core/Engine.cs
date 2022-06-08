@@ -42,9 +42,10 @@ namespace SimpleSnake.Core
                 if (!tryMove)
                 {
                     Console.WriteLine("Bye bye!");
+                    Environment.Exit(0);
                 }
 
-                Thread.Sleep(200);
+                Thread.Sleep(100);
             }
         }
 

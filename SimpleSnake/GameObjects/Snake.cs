@@ -83,6 +83,8 @@ namespace SimpleSnake.GameObjects
                 this.snakeElements.Enqueue(new Point(nextLeftX, nextTopY));
             }
 
+            this.foodIndex = GetRandomIndex();
+
             this.foods[this.foodIndex].SetRandomPosition(this.snakeElements);
         }
 
@@ -97,7 +99,12 @@ namespace SimpleSnake.GameObjects
                 point.Draw(snakeSymbol);
             }
 
+            this.foodIndex = GetRandomIndex();
+
             this.foods[this.foodIndex].SetRandomPosition(this.snakeElements);
         }
+
+        private int GetRandomIndex()
+            => new Random().Next(0,this.foods.Length);
     }
 }
